@@ -1,0 +1,49 @@
+<style>
+.resform{
+  padding: 150px;
+  
+}
+
+</style>
+
+
+<body>
+    <section id="navmain">
+      <nav>
+
+          <ul class="menu">
+            <li><a href="/welcome">Home</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/tuition">Tuition</a></li>
+            <li><a href="/addques">Questions</a></li>
+            <li><a href="/aboutus">About us</a></li>
+            <a href="/"><button class="logout" type="submit" style="margin-top:9px; width:100px;
+             height:30px; border: 0; background-color: #703379; font-size: 0.8em; color: white;border-radius: 2px;">
+             LOGOUT</button></a>
+          </ul>
+          
+      </nav>
+    <h3>Hellooo??</h3>
+    <div class="resform">
+      <form action='/uploadres' method="POST" enctype="multipart/form-data">
+
+    <label>Course name: </label>
+   <select name="course">
+          {{#each dropdownVals }}
+        <option value="{{this.CourseName}}"> {{this.CourseName}} </option>
+        {{/each}}
+          
+    </select>
+         <div><input type="resName" class="input-field" name="resName" placeholder="Enter resource topic"></div> 
+	        <div><input type="file" class="input-field" name="image" style="width:300px; border: 1px solid #ccc;"></div>
+          
+	        <button type="submit" style="width:60px; height:25px; border: 0; background-color: rgb(122, 57, 84); color: white;border-radius: 2px;">Upload</button>
+	    </form>
+      </div>
+
+    </section>
+</body>
+
+
+<!-- menu courses -> choose type resource-> upload
+

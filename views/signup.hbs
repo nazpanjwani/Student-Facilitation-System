@@ -1,0 +1,90 @@
+{{!-- <style>
+    body{
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-size: 100% 720px;
+    background-color: #D3E4CD;
+    background-image: url('img.jpg');
+}
+.form{
+    width: 500px;
+	height: 550px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #E2C2B9;
+	margin-top: 90px;
+	margin-bottom: 50px;
+
+}
+
+.input-field{
+	margin-top: 5px;
+	height: 35px;
+	width: 350px;
+	font-size: 12px;
+	margin-bottom: 5px;
+	background-color: #fff;
+	padding-left: 20px;
+}
+
+.form-input::before{
+	font-family: "FontAwesome";
+	padding-left: 07px;
+	padding-top: 40px;
+	position: absolute;
+	font-size: 35px;
+	color: #2980b9; 
+}
+
+.btn{
+	padding: 10px 15px;
+	border: none;
+	background-color: #27ae60;
+	color: #fff;
+}
+
+</style> --}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> --}}
+<link rel="stylesheet" href="signup.css">
+<title>Sign up</title>
+<body>
+<div class="form">
+    <br>
+    <h2 class="txt">Sign up</h2>
+    <br>
+    <form action="/signup" method="POST" class="txt">
+        <div><input type="username" class="input-field" name="username" placeholder="Set username"></input></div>
+        <div><input type="Password" class="input-field" name="Password" placeholder="Password"></input></div>
+        <div><input type="Password" class="input-field" name="cpassword" placeholder="Confirm Password"></input></div>
+      
+        <div><input type="StdName" class="input-field" name="StdName" placeholder="Your name"></input></div>
+        <div><input type="text" class="input-field" name="ContactNo" placeholder="Contact" pattern="[0-9]{11}"></input></div>
+        <div>
+			<b>Gender:</b>
+			 
+            <label>
+                <input type="radio" name="Gender" value="male"></input>
+                <span>Male</span>
+            </label>
+            <label>
+                <input type="radio" name="Gender" value="female" checked="checked"></input>
+                <span>Female</span>
+            </label>
+        </div>
+<div><input type="Email" class="input-field" name="Email" placeholder="Email"></input></div>
+<div><input type="DegreeProgram" class="input-field" name="DegreeProgram" placeholder="Your current degree program"></input></div>
+<br><br>
+<div>
+	{{!-- <a href="/"> --}}
+	<input type="submit" class="btn" value="Sign up"></input>
+	{{!-- </a> --}}
+	{{!-- <a href="/welcome"><button type="submit" style="width:150px; height:25px; margin:40px; border: 0; margin 40px; background-color: rgb(122, 57, 84);
+   color: white;border-radius: 2px;">Sign up</button></a> --}}
+	</div>
+
+</form>
+
+</div>
+</body>

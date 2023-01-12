@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Home</title>
+ </head>
+ 
+ <link rel="stylesheet" href="welcome.css">
+  <body>
+    <!--Navigation bar-->
+ <header id="DB">
+    <h1>Welcome To ReFlex</h1>
+   <!-- <p>This forum is designed to facilitate students</p> -->
+  {{#if login}}
+    <p>Welcome, {{username}}!</p>
+  {{else}}
+    <p>Please <a href='/'>Log In</a></p>
+  {{/if}}
+    
+  </header>
+
+  <section id="navmain">
+      <nav>
+
+          <ul class="menu">
+            <li><a href="/welcome">Home</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/tuition">Tuition</a></li>
+            <li><a href="/addques">Questions</a></li>
+            <li><a href="/aboutus">About us</a></li>
+            <a href="/"><button class="logout" type="submit" style="margin-top:9px; width:100px;
+             height:30px; border: 0; background-color: #703379; font-size: 0.8em; color: white;border-radius: 2px;">
+             LOGOUT</button></a>
+            
+          </ul>
+      </nav>
+      
+    </section>
+
+  <section id="section-a">
+
+   <!--  <p>this portal is designed for the sharing of various resources on a single platform</p>  -->
+    <p>A student-centric portal designed to ask questions and
+      share resources from around the world all on a single platform!</p>
+  </section>
+  <section id="section-b">
+    <div class="box-1">
+      students can post resources
+    </div>
+    <div class="box-2">
+      students can post queries
+    </div>
+    <div class="box-3">
+      students can have discussion
+    </div>
+  </section>
+</body>
+  </html>

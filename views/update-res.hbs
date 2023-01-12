@@ -1,0 +1,44 @@
+<style>
+form{
+    margin-top: 100px;
+}
+
+</style>
+
+<body>
+    <section id="navmain">
+      <nav>
+
+          <ul class="menu">
+            <li><a href="/welcome">Home</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/tuition">Tuition</a></li>
+            <li><a href="/addques">Questions</a></li>
+            <li><a href="/aboutus">About us</a></li>
+            <a href="/"><button class="logout" type="submit" style="margin-top:9px; width:100px;
+             height:30px; border: 0; background-color: #703379; font-size: 0.8em; color: white;border-radius: 2px;">
+             LOGOUT</button></a>
+          </ul>
+      </nav>
+    </section>
+
+    <form action="/resources/edit/{{resource.ResID}}" method="post">
+
+             <select name="CourseID">
+          {{#each dropdownVals }}
+        <option value="{{this.CourseID}}"> {{this.CourseName}} </option>
+        {{/each}}
+          
+    </select>
+        <input type="resName" value="{{resource.ResName}}" class="input-field" name="ResName" placeholder="Enter resource topic">
+	    <input type="file" value="{{resource.Resource}}" class="input-field" name="Resource" style="width:300px; border: 1px solid #ccc;">
+          
+	        <button type="submit" style="width:60px; height:25px; border: 0; background-color: rgb(122, 57, 84); color: white;border-radius: 2px;">Save resource</button>
+          
+         
+          
+      </form>
+
+
+
+</body>

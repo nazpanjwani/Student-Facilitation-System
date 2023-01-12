@@ -1,0 +1,162 @@
+{{!-- https://www.youtube.com/watch?v=LfVGQtAQK_0&ab_channel=TechShaw
+https://www.youtube.com/watch?v=SmgpRNyR3bo&ab_channel=ProgrammingTogether --}}
+
+
+    <title>Question</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ques.css">
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<style>
+body{
+    background-image: url('img.jpg');
+  }
+.question-card{
+    padding: 100px;
+}
+.form-input{
+    width: 10px;
+    padding: 20px;
+}
+.post-btn{
+    padding: 10px 15px;
+	border: none;
+	background-color: #703379;
+	color: #fff;
+    margin-left: 20px;
+}
+</style>
+<body class="w3-theme-l5">
+
+    <section id="navmain">
+      <nav>
+
+          <ul class="menu">
+            <li><a href="/welcome">Home</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/tuition">Tuition</a></li>
+            <li><a href="/addques">Questions</a></li>
+            <li><a href="/aboutus">About us</a></li>
+            <a href="/"><button class="logout" type="submit" style="margin-top:9px; width:100px;
+             height:30px; border: 0; background-color: #703379; font-size: 0.8em; color: white;border-radius: 2px;">
+             LOGOUT</button></a>
+          </ul>
+      </nav>
+    </section>
+    {{!-- <div class="form">
+        <h5>Comment</h5>
+        <form action="/ex" method="POST">
+            <div class=form-input> <input type="comment" class="input-field" name="comment"
+                    placeholder="enter comment"></input></div>
+            <input type="submit" class="post-btn" value="Post"></input>
+
+        </form>
+    </div> --}}
+
+
+
+
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!-- The Grid -->
+        <div class="w3-row">
+            <!-- Left Column -->
+
+            <!-- Middle Column -->
+            {{!-- <div class="w3-col m7">
+
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                <h6 class="w3-opacity">Social Media template by w3.css</h6>
+                                <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
+                                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>
+                                     Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                <div class="comment-section">
+                                    <div class="comment-input" class="w3-border w3-padding">
+                                        <form action="/addques" method="POST">
+{{!-- isse caard ban raha hai and database mai data bhi jaraha hai but question card mai nazar nai araha card mai--}}
+                                        <div class="input" contenteditable="true">
+                                            <input name="querytext" placeholder="Write a question..">
+                                        </div><br>
+                                        <input type="submit" style="background-color: rgb(122, 57, 84)" class="post-btn w3-margin-bottom" value="Post"></input>
+              
+                                        </form> 
+                                     
+{{!-- this is working in case--------isse jo question post karrahe wo appear horaha hai with card.... --}}
+            {{!-- <div class="input" contenteditable="true"></div>
+            <input class="post-btn" type="button" value="post" /> --}}
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-box"></div>               
+
+
+
+{{!-- <div></div> --}}
+
+
+
+{{!-- Sample cards --}}
+            {{#each ques}}
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <img src="avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                    <h4>Question: </h4><br>
+                    <hr class="w3-clear">
+                    <p>{{this.QueryText}}</p>
+                    <div class="w3-row-padding" style="margin:0 -16px"></div>
+                    <form action="/addques" method="POST">
+                        <div class="input-ans" contenteditable="true">
+                            <div class="ans-box"></div>  
+                            {{#each rep}}
+
+                            <p>{{rep}}</p>
+                            {{/each}}
+                            <input name="replytext" placeholder="Write an answer..">
+                        </div><br>
+                       {{!-- <button type="button" class="post-btn w3-button w3-theme-d1 w3-margin-bottom">
+                        Reply</button>  --}}
+                 <input type="submit" style="background-color: rgb(122, 57, 84)" class="post-btn w3-margin-bottom" value="Reply"></input>
+</form>
+                </div>
+            {{/each}}               
+
+
+                <!-- End Middle Column -->
+            </div>
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+    <br>
+
+
+{{!-- 
+    <div class="comment-section">
+        <div class="comment-input">add a comment
+            <div class="input" contenteditable="true"></div>
+            <input class="post-btn" type="button" value="show" />
+        </div>
+        <div class="comments-box"></div>
+    </div> --}}
+
+
+
+</body>
